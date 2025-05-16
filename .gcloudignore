@@ -1,0 +1,40 @@
+# Arquivos e diretórios ignorados durante o deploy para o Google Cloud
+
+# Arquivos Git
+.git
+.gitignore
+
+# Arquivos de ambiente
+.env
+.env.*
+!.env.example
+
+# Diretórios de testes e temporários
+tmp/
+*_test.go
+
+# Diretórios de build não utilizados
+/vendor/
+
+# Arquivos de configuração local
+docker-compose*.yml
+README.md
+cloudbuild.yaml
+
+# Binários e executáveis
+main
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Arquivos de output de teste
+*.test
+*.out
+
+# IDE e editores
+.vscode/
+.idea/
+*.swp
+*.swo 
