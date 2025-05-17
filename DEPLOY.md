@@ -8,6 +8,22 @@ Este documento explica como implantar a API de Clima por CEP no Google Cloud Run
 2. Ter o Google Cloud SDK instalado localmente
 3. Ter uma chave da API do WeatherAPI (https://www.weatherapi.com/)
 
+## Configurações de Ambiente Importantes
+
+Para o funcionamento correto da API, é necessário configurar as seguintes variáveis de ambiente no Cloud Run:
+
+```
+WEATHER_API_KEY=sua_chave_api_aqui
+```
+
+Ou, para o modo de teste (sem chamar a API externa):
+
+```
+TEST_MODE=true
+```
+
+**Nota:** Se você não configurar a variável `WEATHER_API_KEY` ou não ativar o `TEST_MODE`, a API retornará erro ao tentar buscar a temperatura.
+
 ## Opção 1: Deploy manual
 
 ### 1. Autenticação no Google Cloud
